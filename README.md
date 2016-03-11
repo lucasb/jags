@@ -9,8 +9,8 @@ No fancy generators, just clone this repo and build your app on top of it.
 
 To update dependencies in package.json:
 
-`$ npm install -g npm-check-updates`
-`$ ncu -u`
+- `$ npm install -g npm-check-updates`
+- `$ ncu -u`
 
 ### Setup
 
@@ -18,7 +18,6 @@ To update dependencies in package.json:
 - Find and replace `jags` to `yourappname` in `./`
 - `$ npm install`
 - `$ npm install -g gulp`
-- `$ gem install sass`s
 - `$ gulp`
 
 ### Deployment

@@ -73,11 +73,8 @@ gulp.task('html:dist', ['jade:dist'], function() {
 
 // Sass
 gulp.task('sass', function () {
-  return $.rubySass('app/styles/app.scss', { sourcemap: true })
-    .on('error', function (err) {
-      console.error('Error!', err.message);
-    })
-    .pipe($.sourcemaps.write())
+  return gulp.src('app/styles/app.scss')
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest(TMP_DIR + 'styles'))
     .pipe($.browserSync.reload({stream:true}));
 });
